@@ -1,7 +1,7 @@
 # GowinTRX
 
 This would possibly become a direct sampling RX with a SI5351 controlled TX for digital modes.
-Right now it is Verilog borrowed from fpga_rx, Lattica MachXO2, ported to Sipeed Tang Primer 20K.
+Right now it is Verilog borrowed from fpga_rx, Lattice MachXO2, ported to Sipeed Tang Primer 20K.
 Audio out in first commit is from PWM of a GPIO.
 Next steps:
 - Use Tang audio DAC
