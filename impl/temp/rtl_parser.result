@@ -1,0 +1,116 @@
+[
+ {
+  "InstFile" : "/home/alberto/GowinTRX/src/gowin_mult/gowin_mult.v",
+  "InstLine" : 10,
+  "InstName" : "Gowin_MULT",
+  "ModuleFile" : "/home/alberto/GowinTRX/src/gowin_mult/gowin_mult.v",
+  "ModuleLine" : 10,
+  "ModuleName" : "Gowin_MULT"
+ },
+ {
+  "InstFile" : "/home/alberto/GowinTRX/src/gowin_mult1/gowin_mult1.v",
+  "InstLine" : 10,
+  "InstName" : "Gowin_MULT1",
+  "ModuleFile" : "/home/alberto/GowinTRX/src/gowin_mult1/gowin_mult1.v",
+  "ModuleLine" : 10,
+  "ModuleName" : "Gowin_MULT1"
+ },
+ {
+  "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+  "InstLine" : 10,
+  "InstName" : "top",
+  "ModuleFile" : "/home/alberto/GowinTRX/src/top.v",
+  "ModuleLine" : 10,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 113,
+    "InstName" : "CIC_I",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/CIC.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "CIC"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 122,
+    "InstName" : "CIC_Q",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/CIC.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "CIC"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 131,
+    "InstName" : "SinCos1",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/SinCos.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "SinCos"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 141,
+    "InstName" : "SinCos_test_gen",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/SinCos.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "SinCos"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 150,
+    "InstName" : "ncoGen",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/NCO.v",
+    "ModuleLine" : 13,
+    "ModuleName" : "nco_sig"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 159,
+    "InstName" : "nco_test_gen",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/NCO.v",
+    "ModuleLine" : 13,
+    "ModuleName" : "nco_sig"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 207,
+    "InstName" : "Hilbert",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/Hilbert.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "Hilbert"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 234,
+    "InstName" : "PLL1",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_rPLL"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 310,
+    "InstName" : "SPI_Master_I",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/TX_SPI.v",
+    "ModuleLine" : 5,
+    "ModuleName" : "SPI_Master"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 327,
+    "InstName" : "SPI_Master_Q",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/TX_SPI.v",
+    "ModuleLine" : 5,
+    "ModuleName" : "SPI_Master"
+   },
+   {
+    "InstFile" : "/home/alberto/GowinTRX/src/top.v",
+    "InstLine" : 340,
+    "InstName" : "PWM1",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/PWM.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PWM"
+   }
+  ]
+ }
+]

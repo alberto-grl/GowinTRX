@@ -1,0 +1,29 @@
+Reading netlist file: "/home/alberto/GowinTRX/impl/gwsynthesis/GowinTRX.vg"
+Parsing netlist file "/home/alberto/GowinTRX/impl/gwsynthesis/GowinTRX.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/alberto/GowinTRX/src/sipeed_tang_primer_20k.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.power.html" completed
+Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.pin.html" completed
+Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.rpt.html" completed
+Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.rpt.txt" completed
+Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.tr.html" completed
+Sat May 10 00:02:28 2025
+

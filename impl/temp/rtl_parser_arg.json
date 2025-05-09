@@ -1,0 +1,53 @@
+{
+ "Device" : "GW2A-18C",
+ "Files" : [
+  {
+   "Path" : "/home/alberto/GowinTRX/src/CIC.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/Hilbert.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/NCO.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/PWM.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/SinCos.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/TX_SPI.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/gowin_mult/gowin_mult.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/gowin_mult1/gowin_mult1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "/home/alberto/GowinTRX/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}
