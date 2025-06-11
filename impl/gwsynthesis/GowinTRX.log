@@ -3,16 +3,17 @@ Running parser ...
 Analyzing Verilog file '/home/alberto/GowinTRX/src/CIC.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/Hilbert.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/NCO.v'
-Analyzing Verilog file '/home/alberto/GowinTRX/src/PWM.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/SinCos.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/TX_SPI.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/gowin_mult/gowin_mult.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/gowin_mult1/gowin_mult1.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v'
+Analyzing Verilog file '/home/alberto/GowinTRX/src/pt8211_drive.v'
 Analyzing Verilog file '/home/alberto/GowinTRX/src/top.v'
-Undeclared symbol 'RFIn', assumed default net type 'wire'("/home/alberto/GowinTRX/src/top.v":39)
-Undeclared symbol 'osc_clk', assumed default net type 'wire'("/home/alberto/GowinTRX/src/top.v":114)
-Compiling module 'top'("/home/alberto/GowinTRX/src/top.v":10)
+Undeclared symbol 'RFIn', assumed default net type 'wire'("/home/alberto/GowinTRX/src/top.v":47)
+Undeclared symbol 'osc_clk', assumed default net type 'wire'("/home/alberto/GowinTRX/src/top.v":130)
+Undeclared symbol 'req_w', assumed default net type 'wire'("/home/alberto/GowinTRX/src/top.v":370)
+Compiling module 'top'("/home/alberto/GowinTRX/src/top.v":11)
 Compiling module 'CIC'("/home/alberto/GowinTRX/src/CIC.v":23)
 WARN  (EX3791) : Expression size 80 truncated to fit in target size 32("/home/alberto/GowinTRX/src/CIC.v":120)
 Compiling module 'SinCos'("/home/alberto/GowinTRX/src/SinCos.v":1)
@@ -24,9 +25,9 @@ WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/albe
 WARN  (EX1998) : Net 'sum[14][47]' does not have a driver("/home/alberto/GowinTRX/src/Hilbert.v":30)
 Compiling module 'Gowin_rPLL'("/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v":10)
 Compiling module 'SPI_Master'("/home/alberto/GowinTRX/src/TX_SPI.v":5)
-Compiling module 'PWM'("/home/alberto/GowinTRX/src/PWM.v":1)
+Compiling module 'pt8211_drive'("/home/alberto/GowinTRX/src/pt8211_drive.v":2)
 NOTE  (EX0101) : Current top module is "top"
-WARN  (EX0211) : The output port "TX" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("/home/alberto/GowinTRX/src/top.v":13)
+WARN  (EX0211) : The output port "TX" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("/home/alberto/GowinTRX/src/top.v":15)
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
@@ -43,8 +44,10 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "SinCos" instantiated to "SinCos_test_gen" is swept in optimizing("/home/alberto/GowinTRX/src/top.v":148)
-WARN  (NL0002) : The module "nco_sig" instantiated to "nco_test_gen" is swept in optimizing("/home/alberto/GowinTRX/src/top.v":163)
+WARN  (NL0002) : The module "SinCos" instantiated to "SinCos_test_gen" is swept in optimizing("/home/alberto/GowinTRX/src/top.v":164)
+WARN  (NL0002) : The module "nco_sig" instantiated to "nco_test_gen" is swept in optimizing("/home/alberto/GowinTRX/src/top.v":179)
 [95%] Generate netlist file "/home/alberto/GowinTRX/impl/gwsynthesis/GowinTRX.vg" completed
+WARN  (CK3000) : Can't calculate clocks' relationship between: "HP_BCK_d" and "PLL1/rpll_inst/CLKOUT.default_gen_clk"
+WARN  (CK3000) : Can't calculate clocks' relationship between: "PLL1/rpll_inst/CLKOUT.default_gen_clk" and "HP_BCK_d"
 [100%] Generate report file "/home/alberto/GowinTRX/impl/gwsynthesis/GowinTRX_syn.rpt.html" completed
 GowinSynthesis finish

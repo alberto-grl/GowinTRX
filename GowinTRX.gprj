@@ -8,12 +8,13 @@
         <File path="src/CIC.v" type="file.verilog" enable="1"/>
         <File path="src/Hilbert.v" type="file.verilog" enable="1"/>
         <File path="src/NCO.v" type="file.verilog" enable="1"/>
-        <File path="src/PWM.v" type="file.verilog" enable="1"/>
+        <File path="src/PWM.v" type="file.verilog" enable="0"/>
         <File path="src/SinCos.v" type="file.verilog" enable="1"/>
         <File path="src/TX_SPI.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_mult/gowin_mult.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_mult1/gowin_mult1.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="src/pt8211_drive.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/sipeed_tang_primer_20k.cst" type="file.cst" enable="1"/>
         <File path="src/fpga_rx.sdc" type="file.sdc" enable="1"/>

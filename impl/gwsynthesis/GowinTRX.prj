@@ -7,12 +7,12 @@
         <File path="/home/alberto/GowinTRX/src/CIC.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/Hilbert.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/NCO.v" type="verilog"/>
-        <File path="/home/alberto/GowinTRX/src/PWM.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/SinCos.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/TX_SPI.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/gowin_mult/gowin_mult.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/gowin_mult1/gowin_mult1.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v" type="verilog"/>
+        <File path="/home/alberto/GowinTRX/src/pt8211_drive.v" type="verilog"/>
         <File path="/home/alberto/GowinTRX/src/top.v" type="verilog"/>
     </FileList>
     <OptionList>

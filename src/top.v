@@ -4,11 +4,13 @@ Standalone test of NCO for FPGARX
 
 // IP Express reference : https://www.latticesemi.com/-/media/LatticeSemi/Documents/UserManuals/EI2/FPGA-IPUG-02032-1-0-Arithmetic-Modules.ashx?document_id=52235
 
+// with BIT_1_ADC RF_IN and RF_OUT should be enabled in .cst file   
 `define BIT_1_ADC
 
 
 module top 
   (
+    input rst_n    , //S1 button
    	output [7:0] MYLED,
 	output TX,
 	//output clk_adc,
@@ -28,17 +30,23 @@ module top
 	input MISO_Q,
 	output SCK_Q,
 	output SSEL_Q,
-	output PWMOut
+	//output PWMOut
+ //pt8211接口
+    output       HP_BCK   , //同clk_1p536m
+    output       HP_WS    , //Left and right channel switching signal, low level corresponds to the left channel
+    output       HP_DIN   , //dac串行数据输入信号
+    output       PA_EN     //音频功放使能，高电平有效
 	);
 
 
+`ifdef BIT_1_ADC
 // LVDS Input Buffer
 TLVDS_IBUF  lvds_ibuf (
   .I(RFIn_p),
   .IB(RFIn_n),
   .O(RFIn)
 );
-
+`endif
 
 `ifndef BIT_1_ADC
 reg signed[9:0] RFIn;
@@ -60,8 +68,14 @@ reg clk_adc;  //60 MHz to ADC, mixer, CIC
 wire CIC_out_clkI;  // 60 MHz / CIC decimation, eg. 234375 Hz
 wire CIC_out_clkQ;
 reg [7:0] CICGain;
+`ifdef BIT_1_ADC
 reg signed [19:0] MixerOutI;
 reg signed [19:0] MixerOutQ;	
+`endif
+`ifndef BIT_1_ADC
+wire signed [19:0] MixerOutI;
+wire signed [19:0] MixerOutQ;	
+`endif
 reg [1:0] clk_adc_counter;
 wire [127:0] Registers_I; //will store 8 registers 16 bit wide. 16 * 8 = 128   
 wire [127:0] Registers_Q; //will store 8 registers 16 bit wide. 16 * 8 = 128   
@@ -76,6 +90,8 @@ reg RFInR1;
 wire signed [31:0] I_out;
 wire signed [31:0] Q_out;
 reg signed [31:0] audio_out;
+reg [3:0] dac_clk_div;
+wire dac_clk;
 
 
 
@@ -195,7 +211,7 @@ Multiplier MixerQ  (
 */
   Gowin_MULT1 MixerQ(
         .dout(MixerOutQ[19:0]), //output [19:0] dout
-        .a(LOCosine[9:0]/, //input [9:0] a
+        .a(LOCosine[9:0]), //input [9:0] a
         .b(RFIn[9:0]), //input [9:0] b
         .ce(1), //input ce
         .clk(osc_clk), //input clk
@@ -236,8 +252,14 @@ PLL_TX PLL2 (
         .clkin(XIn) //input clkin
     );
 
+always @(posedge osc_clk or negedge rst_n) begin // Counter block
+    if (!rst_n)
+        dac_clk_div <= 4'd0;
+    else 
+        dac_clk_div <= dac_clk_div + 1'b1;
+end
 
-
+assign dac_clk = dac_clk_div[3];
 assign MYLED[7:6] = 1; //phase_inc_carrGen[63:61];
 assign MYLED[5] = data_out_Q[0]; //MISO_Q;
 assign MYLED[4] = data_out_I[0]; //MISO_I;_out_I
@@ -247,6 +269,7 @@ assign MYLED[1] = LOSine[9];// CIC_outQ[7];
 assign MYLED[0] = 1; //CIC_out_clkQ ;
 //assign TX = phase_accum[63];
 assign TX_NCO = phase_accum[43];
+assign PA_EN = 1'b1;//PA Normally Open
 
 
 always @ (posedge (osc_clk /*clk_adc*/))
@@ -337,6 +360,21 @@ SPI_Master SPI_Master_Q (
 .Registers (Registers_Q)
 );
 
+
+//音频DAC驱动
+pt8211_drive u_pt8211_drive_0(
+    .clk_1p536m(dac_clk),//bit clock, each sampling point occupies 32 clk_1p536m (16 for each left and right channel)
+    .rst_n     (rst_n),//Active low asynchronous reset signal
+    //用户数据接口
+    .idata     (audio_out[31:16]),
+    .req       (req_w),//Data request signal, can be connected to the read request of external FIFO (to avoid empty reading, try to AND it with !fifo_empty as fifo_rd)
+    //pt8211接口
+    .HP_BCK   (HP_BCK),//同clk_1p536m
+    .HP_WS    (HP_WS),//Left and right channel switching signal, low level corresponds to the left channel
+    .HP_DIN   (HP_DIN)//DAC serial data input signal
+);
+
+/*
 PWM PWM1 (
 .clk (osc_clk),
 //.DataIn (IIR_out), //(CIC_out),
@@ -346,5 +384,5 @@ PWM PWM1 (
 //.DataIn (LOSine_test_gen),
 .PWMOut (PWMOut)
 );
-
+*/
 endmodule

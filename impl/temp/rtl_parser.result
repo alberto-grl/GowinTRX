@@ -17,15 +17,15 @@
  },
  {
   "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-  "InstLine" : 10,
+  "InstLine" : 11,
   "InstName" : "top",
   "ModuleFile" : "/home/alberto/GowinTRX/src/top.v",
-  "ModuleLine" : 10,
+  "ModuleLine" : 11,
   "ModuleName" : "top",
   "SubInsts" : [
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 113,
+    "InstLine" : 129,
     "InstName" : "CIC_I",
     "ModuleFile" : "/home/alberto/GowinTRX/src/CIC.v",
     "ModuleLine" : 23,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 122,
+    "InstLine" : 138,
     "InstName" : "CIC_Q",
     "ModuleFile" : "/home/alberto/GowinTRX/src/CIC.v",
     "ModuleLine" : 23,
@@ -41,7 +41,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 131,
+    "InstLine" : 147,
     "InstName" : "SinCos1",
     "ModuleFile" : "/home/alberto/GowinTRX/src/SinCos.v",
     "ModuleLine" : 1,
@@ -49,7 +49,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 141,
+    "InstLine" : 157,
     "InstName" : "SinCos_test_gen",
     "ModuleFile" : "/home/alberto/GowinTRX/src/SinCos.v",
     "ModuleLine" : 1,
@@ -57,7 +57,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 150,
+    "InstLine" : 166,
     "InstName" : "ncoGen",
     "ModuleFile" : "/home/alberto/GowinTRX/src/NCO.v",
     "ModuleLine" : 13,
@@ -65,7 +65,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 159,
+    "InstLine" : 175,
     "InstName" : "nco_test_gen",
     "ModuleFile" : "/home/alberto/GowinTRX/src/NCO.v",
     "ModuleLine" : 13,
@@ -73,7 +73,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 207,
+    "InstLine" : 223,
     "InstName" : "Hilbert",
     "ModuleFile" : "/home/alberto/GowinTRX/src/Hilbert.v",
     "ModuleLine" : 7,
@@ -81,7 +81,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 234,
+    "InstLine" : 250,
     "InstName" : "PLL1",
     "ModuleFile" : "/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v",
     "ModuleLine" : 10,
@@ -89,7 +89,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 310,
+    "InstLine" : 333,
     "InstName" : "SPI_Master_I",
     "ModuleFile" : "/home/alberto/GowinTRX/src/TX_SPI.v",
     "ModuleLine" : 5,
@@ -97,7 +97,7 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 327,
+    "InstLine" : 350,
     "InstName" : "SPI_Master_Q",
     "ModuleFile" : "/home/alberto/GowinTRX/src/TX_SPI.v",
     "ModuleLine" : 5,
@@ -105,11 +105,11 @@
    },
    {
     "InstFile" : "/home/alberto/GowinTRX/src/top.v",
-    "InstLine" : 340,
-    "InstName" : "PWM1",
-    "ModuleFile" : "/home/alberto/GowinTRX/src/PWM.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "PWM"
+    "InstLine" : 365,
+    "InstName" : "u_pt8211_drive_0",
+    "ModuleFile" : "/home/alberto/GowinTRX/src/pt8211_drive.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "pt8211_drive"
    }
   ]
  }

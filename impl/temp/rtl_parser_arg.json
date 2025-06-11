@@ -14,10 +14,6 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/alberto/GowinTRX/src/PWM.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/alberto/GowinTRX/src/SinCos.v",
    "Type" : "verilog"
   },
@@ -35,6 +31,10 @@
   },
   {
    "Path" : "/home/alberto/GowinTRX/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/alberto/GowinTRX/src/pt8211_drive.v",
    "Type" : "verilog"
   },
   {

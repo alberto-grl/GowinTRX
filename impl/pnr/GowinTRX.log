@@ -7,6 +7,9 @@ Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
+WARN  (TA1132) :  'HP_BCK_d' was determined to be a clock but was not created.
+WARN  (TA1117) : Can't calculate clocks' relationship between: "HP_BCK_d" and "PLL1/rpll_inst/CLKOUT.default_gen_clk"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "PLL1/rpll_inst/CLKOUT.default_gen_clk" and "HP_BCK_d"
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -25,5 +28,5 @@ Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.pin.html" completed
 Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.rpt.html" completed
 Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.rpt.txt" completed
 Generate file "/home/alberto/GowinTRX/impl/pnr/GowinTRX.tr.html" completed
-Sat May 10 00:02:28 2025
+Thu Jun  5 23:06:09 2025
 
